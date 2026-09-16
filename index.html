@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive image gallery built with HTML, CSS and JavaScript.">
+  <title>Moments Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <nav class="navbar">
+    <div class="logo">Moments<span>.</span></div>
+    <a href="#gallery" class="nav-link">Explore Gallery</a>
+  </nav>
+  <div class="hero-content">
+    <p class="eyebrow">VISUAL COLLECTION</p>
+    <h1>Explore Beautiful <span>Moments</span></h1>
+    <p class="hero-text">Discover nature, wildlife, travel and architecture through a clean, modern image gallery.</p>
+  </div>
+</header>
+
+<main id="gallery" class="gallery-section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">MY COLLECTION</p>
+      <h2>Image Gallery</h2>
+    </div>
+    <p class="gallery-note">Click an image to open the full-screen viewer.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="animals">Animals</button>
+    <button class="filter-btn" data-filter="travel">Travel</button>
+    <button class="filter-btn" data-filter="architecture">Architecture</button>
+  </div>
+
+  <div class="gallery-grid">
+    <article class="gallery-card" data-category="nature"><img src="nature1.jpg" alt="Nature landscape" loading="lazy"><div class="card-overlay"><span>Nature</span><button class="view-btn">View</button></div></article>
+    <article class="gallery-card" data-category="nature"><img src="nature2.jpg" alt="Beautiful nature scene" loading="lazy"><div class="card-overlay"><span>Nature</span><button class="view-btn">View</button></div></article>
+    <article class="gallery-card" data-category="animals"><img src="animal11.jpg" alt="Animal portrait" loading="lazy"><div class="card-overlay"><span>Animals</span><button class="view-btn">View</button></div></article>
+    <article class="gallery-card" data-category="animals"><img src="animal12.jpg" alt="Animal in nature" loading="lazy"><div class="card-overlay"><span>Animals</span><button class="view-btn">View</button></div></article>
+    <article class="gallery-card" data-category="travel"><img src="travel11.jpg" alt="Travel destination" loading="lazy"><div class="card-overlay"><span>Travel</span><button class="view-btn">View</button></div></article>
+    <article class="gallery-card" data-category="travel"><img src="travel12.jpg" alt="Travel landscape" loading="lazy"><div class="card-overlay"><span>Travel</span><button class="view-btn">View</button></div></article>
+    <article class="gallery-card" data-category="architecture"><img src="architecture1.jpg" alt="Architecture" loading="lazy"><div class="card-overlay"><span>Architecture</span><button class="view-btn">View</button></div></article>
+    <article class="gallery-card" data-category="architecture"><img src="architecture2.jpg" alt="Architecture detail" loading="lazy"><div class="card-overlay"><span>Architecture</span><button class="view-btn">View</button></div></article>
+  </div>
+</main>
+
+<footer class="footer">© 2026 Moments Gallery · Built with HTML, CSS & JavaScript</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="closeBtn" aria-label="Close">&times;</button>
+  <button class="lightbox-arrow prev" id="prevBtn" aria-label="Previous">&#10094;</button>
+  <div class="lightbox-content">
+    <img id="lightboxImage" src="" alt="">
+    <div class="lightbox-caption"><span id="lightboxCategory"></span><span id="imageCounter"></span></div>
+  </div>
+  <button class="lightbox-arrow next" id="nextBtn" aria-label="Next">&#10095;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
